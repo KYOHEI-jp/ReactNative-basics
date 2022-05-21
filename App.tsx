@@ -1,15 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import { Text, View } from 'react-native';
-import tw from 'tailwind-rn';
 import React from 'react';
+import { RootNavigator } from './navigations/RootNavigator';
 
 export default function App() {
   return (
+    <RootNavigator />
     // flex-1でバックグラウンド全体、背景全部にgray-300、縦真ん中、横中央寄せ
-    <View style={tw('flex-1 bg-gray-300 justify-center items-center')}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    // <View style={tw('flex-1 bg-gray-300 justify-center items-center')}>
+    //   <Text>Open up App.tsx to start working on your app!</Text>
+    //   <StatusBar style="auto" />
+    // </View>
   );
 }
 
