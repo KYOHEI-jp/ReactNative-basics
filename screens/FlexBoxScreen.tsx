@@ -15,15 +15,15 @@ export const FlexBoxScreen: VFC<Props> = ({ navigation }) => {
         }
     }, []);
     return (
-        <View style={tailwind('flex-1　flex-row bg-gray-300 justify-center items-center')}>
+        <View style={tailwind('flex-1 bg-gray-300 justify-end items-center')}>
             <View style={tailwind("w-16 h-16 bg-indigo-200")} />
             <View style={tailwind("w-16 h-16 bg-green-200")} />
             <View style={tailwind("w-16 h-16 bg-red-200")} />
-            {/* <Text>FlexBox</Text>
+            <Text>FlexBox</Text>
             <View style={tailwind("my-3")}>
                 <Button title="Go to Hello"
                     onPress={() => navigation.navigate("Hello")} />
-            </View> */}
+            </View>
         </View>
     )
 }
