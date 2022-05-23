@@ -10,10 +10,10 @@ const Stack = createNativeStackNavigator();
 export const RootNavigator = () => {
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName="ReduxTK">
-                <Stack.Screen name="FlexBox" component={FlexBoxScreen} />
-                <Stack.Screen name="ReduxTK" component={ReduxTKScreen} />
-                <Stack.Screen name="Hello" component={HelloScreen} />
+            <Stack.Navigator screenOptions={{ headerStyle: { backgroundColor: "#167476" } }} initialRouteName="ReduxTK">
+                <Stack.Screen name="FlexBox" component={FlexBoxScreen} options={{ headerTitleAlign: 'center' }} />
+                <Stack.Screen name="ReduxTK" component={ReduxTKScreen} options={{ headerTitleAlign: 'center' }} />
+                <Stack.Screen name="Hello" component={HelloScreen} options={{ headerTitleAlign: 'center' }} />
             </Stack.Navigator>
         </NavigationContainer>
     );
