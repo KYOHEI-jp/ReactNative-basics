@@ -22,5 +22,6 @@ export const counterSlice = createSlice({
 });
 
 export const { increment, decrement, addByPayload } = counterSlice.actions;
+// RootStateの中からcounter.countでcounterSliceのcountにアクセスして返してくれる
 export const selectCount = (state: RootState) => state.counter.count;
 export default counterSlice.reducer;
