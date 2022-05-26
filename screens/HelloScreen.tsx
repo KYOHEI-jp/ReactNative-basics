@@ -12,6 +12,7 @@ type Props = NativeStackScreenProps<RootStackParamList, 'Hello'>;
 
 export const HelloScreen: VFC<Props> = ({ navigation }) => {
     const [text, setText] = useState("")
+    const [printText, setPrintText] = useState("")
     useEffect(() => {
         console.log("mounted Hello");
         return () => {
@@ -34,6 +35,13 @@ export const HelloScreen: VFC<Props> = ({ navigation }) => {
                 leftIcon={<FontAwesome name="pencil" size={24} color="gray" />}
                 value={text}
                 onChangeText={(txt) => setText(txt)} />
+            <Text>{text}</Text>
+            <Input
+                placeholder="type print text"
+                leftIcon={<FontAwesome name="pencil" size={24} color="gray" />}
+                value={printText}
+                onChangeText={(text) => setPrintText(text)} />
+            <Text>{printText}</Text>
             <Child printMsg={printMsg} />
         </View>
     )
