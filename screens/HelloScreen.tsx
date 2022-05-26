@@ -1,4 +1,4 @@
-import React, { VFC, useEffect, useState } from 'react'
+import React, { VFC, useEffect, useState, useCallback } from 'react'
 import { View, Text } from 'react-native'
 import tailwind from 'tailwind-rn'
 import { FontAwesome } from '@expo/vector-icons'
@@ -18,6 +18,11 @@ export const HelloScreen: VFC<Props> = ({ navigation }) => {
             console.log("unmounted Hello");
         }
     }, []);
+
+    const printMsg = useCallback(() => {
+        console.log("Hello");
+    }, []);
+
     return (
         <View style={tailwind('flex-1 bg-gray-300 justify-center items-center')}>
             <Text>Hello</Text>
@@ -26,8 +31,10 @@ export const HelloScreen: VFC<Props> = ({ navigation }) => {
                     onPress={() => navigation.navigate("ReduxTK")} />
             </View>
             <Input placeholder="type print text"
-                leftIcon={<FontAwesome name="pencil" size={24} color="gray" />} />
-            <Child />
+                leftIcon={<FontAwesome name="pencil" size={24} color="gray" />}
+                value={text}
+                onChangeText={(txt) => setText(txt)} />
+            <Child printMsg={printMsg} />
         </View>
     )
 }
