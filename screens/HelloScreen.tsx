@@ -1,13 +1,15 @@
-import React, { VFC, useEffect } from 'react'
+import React, { VFC, useEffect, useState } from 'react'
 import { View, Text } from 'react-native'
 import tailwind from 'tailwind-rn'
 import { RootStackParamList } from '../types/types'
 import { NativeStackScreenProps } from '@react-navigation/native-stack'
 import { Button } from 'react-native-elements'
+import { Child } from '../components/Child'
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Hello'>;
 
 export const HelloScreen: VFC<Props> = ({ navigation }) => {
+    const [text, setText] = useState("")
     useEffect(() => {
         console.log("mounted Hello");
         return () => {
@@ -21,6 +23,7 @@ export const HelloScreen: VFC<Props> = ({ navigation }) => {
                 <Button title="Go to ReduxTK"
                     onPress={() => navigation.navigate("ReduxTK")} />
             </View>
+            <Child />
         </View>
     )
 }
