@@ -1,10 +1,12 @@
 import React, { VFC, useEffect, useState } from 'react'
 import { View, Text } from 'react-native'
 import tailwind from 'tailwind-rn'
+import { FontAwesome } from '@expo/vector-icons'
 import { RootStackParamList } from '../types/types'
 import { NativeStackScreenProps } from '@react-navigation/native-stack'
 import { Button } from 'react-native-elements'
 import { Child } from '../components/Child'
+import { Input } from 'react-native-elements/dist/input/Input'
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Hello'>;
 
@@ -23,6 +25,8 @@ export const HelloScreen: VFC<Props> = ({ navigation }) => {
                 <Button title="Go to ReduxTK"
                     onPress={() => navigation.navigate("ReduxTK")} />
             </View>
+            <Input placeholder="type print text"
+                leftIcon={<FontAwesome name="pencil" size={24} color="gray" />} />
             <Child />
         </View>
     )
