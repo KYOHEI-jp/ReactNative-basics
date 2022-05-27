@@ -21,7 +21,7 @@ export const HelloScreen: VFC<Props> = ({ navigation }) => {
     }, []);
 
     const printMsg = useCallback(() => {
-        console.log("Hello");
+        console.log(`Print: ${printText}`);
     }, []);
 
     return (
