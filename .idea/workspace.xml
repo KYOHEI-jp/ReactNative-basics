@@ -24,9 +24,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fc10be2d-1b7d-4bfb-bffa-8c476d9f280c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/FlexBoxScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/FlexBoxScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/ReduxTKScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/ReduxTKScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slices/counterSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/slices/counterSlice.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

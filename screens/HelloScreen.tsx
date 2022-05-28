@@ -19,10 +19,11 @@ export const HelloScreen: VFC<Props> = ({ navigation }) => {
             console.log("unmounted Hello");
         }
     }, []);
-
+    // stateを指定しておくことでprintMsgの関数は
+    //printTextのstateが変更になるたびに関数オブジェクトを再生成してくれる
     const printMsg = useCallback(() => {
         console.log(`Print: ${printText}`);
-    }, []);
+    }, [printText]);
 
     return (
         <View style={tailwind('flex-1 bg-gray-300 justify-center items-center')}>
